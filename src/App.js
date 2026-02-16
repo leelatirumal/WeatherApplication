@@ -1,7 +1,7 @@
 import './App.css';
-import InfoBox1 from './Componenets/InfoBox1';
-import InfoBox2 from './Componenets/InfoBox2';
-import SearchBar from './Componenets/SearchBar';
+import InfoBox1 from './Components/InfoBox1';
+import InfoBox2 from './Components/InfoBox2';
+import SearchBar from './Components/SearchBar';
 import { useState } from 'react';
 import {useEffect} from 'react'
 function App() {
