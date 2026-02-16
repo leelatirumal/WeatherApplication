@@ -1,0 +1,18 @@
+#Search-button{
+
+}
+#SearchBar {
+    margin-top: 20px;
+}
+#SearchBar input{
+    width: 40%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    background-image: url('https://i.fbcd.co/products/resized/resized-750-500/gtp010e-15-e08-mainpreview-78c8b68d7e9364b4e8c596f885321aa2f21fdccafb75b44d012c0130ac96970d.jpg');
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    border: 1px solid #ccc;
+}
