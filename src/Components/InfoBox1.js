@@ -12,26 +12,24 @@ function InfoBox1({todayReport}){
     dateStyle: "full",
     timeStyle: "short"
     }).replace("at",",");
+    
+    //sunrise time
+    const sunrise= new Date(todayReport.sys?.sunrise * 1000);
+    const sunriseTime = sunrise.toLocaleTimeString('en-IN', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+    timeZone: 'Asia/Kolkata'
+    });
 
-    console.log(normalFormat)
-
-
-const sunrise= new Date(todayReport.sys?.sunrise * 1000);
-
-const sunriseTime = sunrise.toLocaleTimeString('en-IN', {
-  hour: '2-digit',
-  minute: '2-digit',
-  hour12: true,
-  timeZone: 'Asia/Kolkata'
-});
-const sunset= new Date(todayReport.sys?.sunset * 1000);
-
-const sunsetTime = sunset.toLocaleTimeString('en-IN', {
-  hour: '2-digit',
-  minute: '2-digit',
-  hour12: true,
-  timeZone: 'Asia/Kolkata'
-});
+    //sunset time
+    const sunset= new Date(todayReport.sys?.sunset * 1000);
+    const sunsetTime = sunset.toLocaleTimeString('en-IN', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+    timeZone: 'Asia/Kolkata'
+    });
 
 
 

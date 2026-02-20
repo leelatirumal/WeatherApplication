@@ -11,17 +11,18 @@ function App() {
 
   const weatherData =(cityName) => {
     // Fetch weather data from API and update state
-      
+      if(cityName === "") return alert("Please enter a city name.");
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=e3104dea7916805d41f4f98ac4aec632&units=metric`)
-        .then(response => response.json())
-        .then(data => {
+        .then(async response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          const data = await response.json();  
           console.log("location id ",data);
           setCityData(data);
           weatherForeCast(data.coord?.lat, data.coord?.lon);
+          console.log("city data ",cityName);
         })
-
         .catch(error => {
-          console.error('Error fetching weather data:', error);
+          alert("Enter Correct City Name or Try Again ");
         });
 
   }
