@@ -1,11 +1,70 @@
-#InfoBox2{
-    background-color: rgba(215, 197, 197, 0.5);
-    height: 600px;
-    width: 30%;
-    margin-top:20px;
+#InfoBox2 {
+    width: 30%; /* Kept your width */
+    margin-top: 20px;
+    position: relative;
     left: 5%;
-    border-radius: 15px;
-    background-color: rgba(215, 197, 197, 0.5);
+    border-radius: 20px;
+    /* Matching InfoBox1 Glass Look */
+    background: rgba(40, 44, 52, 0.6); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: white;
+    padding: 20px;
+    margin-right: 20px;
+}
 
+#InfoBox2 h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00d2ff; /* Using the bright blue accent */
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
 
+#forecast-card {
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 10px;
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease;
+}
+
+#forecast-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+}
+
+#forecast-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+/* For the weather description text */
+#forecast-date br + span, 
+#forecast-desc { 
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: capitalize;
+}
+
+#forecast-temp {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0;
+}
+
+#InfoBox2 img {
+    width: 50px;
+    height: 50px;
 }

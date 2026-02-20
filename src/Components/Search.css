@@ -1,18 +1,56 @@
-#Search-button{
-
-}
 #SearchBar {
     margin-top: 20px;
 }
-#SearchBar input{
+
+#SearchBar input {
     width: 40%;
-    height: 40px;
-    padding: 10px;
-    font-size: 16px;
+    height: 50px; /* Slightly taller for a modern feel */
+    padding: 10px 50px 10px 20px; /* Space on right for the icon */
+    font-size: 1rem;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    
+    /* Dark Glass Styling */
+    background-color: rgba(40, 44, 52, 0.7);
+    backdrop-filter: blur(10px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px 0 0 25px; /* Rounded left side */
+    
+    /* Background Icon */
     background-image: url('https://i.fbcd.co/products/resized/resized-750-500/gtp010e-15-e08-mainpreview-78c8b68d7e9364b4e8c596f885321aa2f21fdccafb75b44d012c0130ac96970d.jpg');
-    background-size: 40px;
+    background-size: 25px;
     background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 50%;
-    border: 1px solid #ccc;
+    background-position: right 15px center;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Change placeholder color to match the theme */
+#SearchBar input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Glow effect when typing */
+#SearchBar input:focus {
+    border-color: #00d2ff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+#Search-button {
+    height: 50px;
+    padding: 0 25px;
+    background-color: #00d2ff; /* Your theme's accent blue */
+    color: #1a1a1a; /* Dark text for high contrast */
+    border: none;
+    border-radius: 0 25px 25px 0; /* Rounded right side */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#Search-button:hover {
+    background-color: #0099cc;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
 }
